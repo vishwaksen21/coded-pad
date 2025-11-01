@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coded Pad – Secure Note</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="pad-body font-sans" id="padBody">
+
+    <!-- ── Top Header Toolbar ── -->
+    <header class="pad-header" id="padHeader">
+        <div class="pad-brand-group">
+            <a href="/" class="pad-logo" title="Back to Coded Pad Home">🔒 Coded Pad</a>
+            <div class="pad-code-pill" id="codePill" title="Click to copy secret key" onclick="copySecretCode()">
+                <span class="code-pill-label">Key:</span>
+                <span class="code-pill-val" id="codeDisplay">{{ secret_code }}</span>
+                <span class="code-copy-icon">📋</span>
+            </div>
+        </div>
+
+        <div class="pad-meta">
+            <div class="save-status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span id="saveStatus" class="save-status" aria-live="polite">All changes saved</span>
+            </div>
+        </div>
+
+        <div class="pad-actions">
+            <!-- Theme Mode Toggle -->
+            <button class="pad-tool-btn" id="themeBtn" onclick="cycleTheme()" title="Switch theme (Light / Dark / System)" aria-label="Toggle theme">
+                <span id="themeIcon">🌓</span>
+            </button>
+
+            <!-- Typography Switcher -->
+            <div class="dropdown-wrap">
+                <button class="pad-tool-btn" id="fontDropdownBtn" onclick="toggleFontMenu()" title="Font family" aria-label="Change font">
+                    <span id="fontLabel">Sans</span> ▾
+                </button>
+                <div class="dropdown-menu" id="fontMenu">
+                    <button type="button" class="dropdown-item active" data-font="sans" onclick="setFontFamily('sans')">Inter (Sans)</button>
+                    <button type="button" class="dropdown-item" data-font="serif" onclick="setFontFamily('serif')">Lora (Serif)</button>
+                    <button type="button" class="dropdown-item" data-font="mono" onclick="setFontFamily('mono')">JetBrains (Mono)</button>
+                </div>
+            </div>
+
+            <!-- Zen Mode Toggle -->
+            <button class="pad-tool-btn" id="zenBtn" onclick="toggleZenMode()" title="Zen writing mode (Fullscreen / Distraction-free)" aria-label="Zen Mode">
+                <span>🔲</span>
+            </button>
+
+            <!-- Export Menu -->
+            <div class="dropdown-wrap">
+                <button class="pad-tool-btn" id="exportBtn" onclick="toggleExportMenu()" title="Export Note" aria-label="Export options">
+                    <span>Export ▾</span>
+                </button>
+                <div class="dropdown-menu dropdown-right" id="exportMenu">
+                    <button type="button" class="dropdown-item" onclick="exportNote('md')">📥 Markdown (.md)</button>
+                    <button type="button" class="dropdown-item" onclick="exportNote('txt')">📄 Plain Text (.txt)</button>
+                    <button type="button" class="dropdown-item" onclick="copyNoteContent()">📋 Copy to Clipboard</button>
+                    <hr class="dropdown-divider">
+                    <button type="button" class="dropdown-item dropdown-danger" onclick="confirmClearNote()">🗑️ Clear Note</button>
+                </div>
+            </div>
+
+            <!-- Copy Quick Button -->
+            <button class="pad-copy-btn" id="copyBtn" onclick="copyNoteContent()" title="Copy entire note to clipboard" aria-label="Copy note content">Copy</button>
+
+            <!-- Save Primary Button -->
+            <button class="pad-save-btn" id="saveBtn" onclick="saveNote()" title="Save changes (Ctrl+S / Cmd+S)">
+                <span>Save</span>
+                <kbd class="kbd-hint">⌘S</kbd>
+            </button>
+        </div>
+    </header>
+
+    <!-- ── Note Textarea Container ── -->
+    <main class="pad-main">
+        <textarea
+            id="noteArea"
+            class="pad-textarea"
+            placeholder="Write your private note here... Everything is encrypted with AES-256."
+            spellcheck="true"
+        >{{ note }}</textarea>
+    </main>
+
+    <!-- ── Zen Mode Exit Pill ── -->
+    <div class="zen-exit-pill" id="zenExitPill" onclick="toggleZenMode()" title="Exit Zen Mode (Esc)">
+        <span>Exit Zen Mode (Esc)</span>
+    </div>
+
+    <!-- ── Footer Status Bar ── -->
+    <footer class="pad-footer" id="padFooter">
+        <div class="pad-footer-left">
+            <span class="pad-badge-muted">Created: {{ created_time }}</span>
+            <span class="pad-footer-dot">·</span>
+            <span id="updatedTime" class="pad-badge-muted">Last saved: {{ updated_time }}</span>
+        </div>
+
+        <div class="pad-stats">
+            <span class="stat-pill" id="wordCount">0 words</span>
+            <span class="pad-footer-dot">·</span>
+            <span class="stat-pill" id="charCount">0 characters</span>
+            <span class="pad-footer-dot">·</span>
+            <span class="stat-pill" id="lineCount">0 lines</span>
+            <span class="pad-footer-dot">·</span>
+            <span class="stat-pill" id="readTime">~1 min read</span>
+        </div>
+
+        <div class="pad-footer-right">
+            <a href="/" class="pad-close-link">← Switch Note</a>
+        </div>
+    </footer>
+
+    <!-- ── Toast Container ── -->
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <!-- ── Confirm Modal ── -->
+    <div class="modal-backdrop" id="clearModal" style="display: none;">
+        <div class="modal-box">
+            <h3 class="modal-title">Clear this note?</h3>
+            <p class="modal-text">Are you sure you want to delete all text in this note? This action will overwrite your saved note upon saving.</p>
+            <div class="modal-actions">
+                <button type="button" class="modal-btn-cancel" onclick="closeClearModal()">Cancel</button>
+                <button type="button" class="modal-btn-danger" onclick="executeClearNote()">Clear Content</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pass secret_code to JavaScript safely -->
+    <script>
+        const SECRET_CODE = {{ secret_code | tojson }};
+    </script>
+    <script src="/static/js/pad.js"></script>
+
+</body>
+</html>

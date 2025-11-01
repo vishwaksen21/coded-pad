@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coded Pad – Zero-Knowledge Ephemeral Notepad</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="home-body">
+
+    <div class="home-ambient-glow"></div>
+
+    <main class="home-center">
+        <!-- Brand Header -->
+        <div class="home-logo-wrap">
+            <div class="home-logo-icon">🔒</div>
+            <span class="home-badge">End-to-End Encrypted</span>
+        </div>
+
+        <h1 class="home-title">Coded Pad</h1>
+        <p class="home-sub">Enter a secret code to open an existing note or create a new one instantly. No accounts, no email, no tracking.</p>
+
+        <!-- Access Form -->
+        <form class="home-form" action="/open" method="POST" id="homeForm">
+            <div class="home-input-wrap">
+                <span class="home-input-prefix">🔑</span>
+                <input
+                    type="password"
+                    id="secret_code"
+                    name="secret_code"
+                    class="home-input"
+                    placeholder="Enter or generate secret key..."
+                    minlength="3"
+                    required
+                    autocomplete="off"
+                    autofocus
+                />
+                <button type="button" class="home-peek-btn" id="peekBtn" title="Show / Hide Code" aria-label="Toggle password visibility">
+                    👁️
+                </button>
+            </div>
+
+            <div class="home-form-actions">
+                <button type="button" class="home-gen-btn" id="generateKeyBtn" title="Generate a cryptographically random, memorable secret key">
+                    🎲 Generate Key
+                </button>
+                <button type="submit" class="home-btn">
+                    <span>Open Pad</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </form>
+
+        <p class="home-hint">
+            <strong>Key concept:</strong> Same code = opens your note · New code = creates a fresh note.
+        </p>
+
+        <!-- Feature Highlights -->
+        <div class="home-features">
+            <div class="feature-item">
+                <span class="feature-icon">🛡️</span>
+                <span class="feature-text">AES-256-CBC</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <span class="feature-text">Zero Latency</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🕶️</span>
+                <span class="feature-text">Zero Auth</span>
+            </div>
+        </div>
+
+        <!-- Recent Pads Container (purely client-side) -->
+        <div class="recent-pads" id="recentPadsWrap" style="display: none;">
+            <div class="recent-header">
+                <span>Recent Pads on this Device</span>
+                <button type="button" class="recent-clear" id="clearRecentBtn">Clear</button>
+            </div>
+            <div class="recent-list" id="recentPadsList"></div>
+        </div>
+    </main>
+
+    <!-- Footer with GitHub link -->
+    <footer class="home-footer">
+        <a href="https://github.com/vishwaksen21" target="_blank" rel="noopener" class="github-link">
+            <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            <span>vishwaksen21</span>
+            <span class="gh-tag">v3.0</span>
+        </a>
+    </footer>
+
+    <script>
+        const secretInput = document.getElementById('secret_code');
+        const peekBtn = document.getElementById('peekBtn');
+        const generateBtn = document.getElementById('generateKeyBtn');
+
+        peekBtn.addEventListener('click', () => {
+            const isPassword = secretInput.type === 'password';
+            secretInput.type = isPassword ? 'text' : 'password';
+            peekBtn.textContent = isPassword ? '🙈' : '👁️';
+        });
+
+        const adjectives = ['cosmic', 'silent', 'emerald', 'velvet', 'swift', 'golden', 'shadow', 'stellar', 'mystic', 'vibrant', 'crystal', 'azure', 'solar', 'frost'];
+        const nouns = ['tiger', 'falcon', 'river', 'vault', 'nebula', 'harbor', 'phoenix', 'forest', 'canyon', 'horizon', 'summit', 'aurora', 'citadel', 'comet'];
+
+        generateBtn.addEventListener('click', () => {
+            const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const noun = nouns[Math.floor(Math.random() * nouns.length)];
+            const num = Math.floor(10 + Math.random() * 90);
+            const key = `${adj}-${noun}-${num}`;
+            secretInput.value = key;
+            secretInput.type = 'text';
+            peekBtn.textContent = '🙈';
+            secretInput.focus();
+        });
+
+        const STORAGE_KEY = 'codedpad_recent_pads';
+        function getRecentPads() {
+            try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch { return []; }
+        }
+        function renderRecentPads() {
+            const recent = getRecentPads();
+            const wrap = document.getElementById('recentPadsWrap');
+            const list = document.getElementById('recentPadsList');
+            if (!recent.length) { wrap.style.display = 'none'; return; }
+            wrap.style.display = 'block';
+            list.innerHTML = '';
+            recent.slice(0, 5).forEach(pad => {
+                const item = document.createElement('a');
+                item.className = 'recent-item';
+                item.href = `/pad/${encodeURIComponent(pad.code)}`;
+                item.innerHTML = `<span class="recent-code">${pad.code}</span><span class="recent-time">${pad.date}</span>`;
+                list.appendChild(item);
+            });
+        }
+        document.getElementById('clearRecentBtn').addEventListener('click', () => {
+            localStorage.removeItem(STORAGE_KEY);
+            renderRecentPads();
+        });
+        document.getElementById('homeForm').addEventListener('submit', () => {
+            const code = secretInput.value.trim();
+            if (code) {
+                const recent = getRecentPads().filter(p => p.code !== code);
+                recent.unshift({ code, date: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) });
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(recent.slice(0, 8)));
+            }
+        });
+        renderRecentPads();
+    </script>
+</body>
+</html>

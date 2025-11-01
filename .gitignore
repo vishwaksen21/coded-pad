@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Database
+notes.db
+
+# Env
+.env
+.env.local
+.vercel
+.DS_Store
