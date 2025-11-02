@@ -799,3 +799,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     .kbd-hint { display: none; }
     .pad-save-btn, .pad-copy-btn, .pad-tool-btn { padding: 6px 10px; font-size: 0.78rem; }
 }
+
+/* [2025-11-02] style(base): define core CSS reset and box sizing */
