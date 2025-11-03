@@ -71,3 +71,5 @@ if __name__ == "__main__":
     unittest.main()
 
 # [2025-11-02] test(crypto): add test suite for key derivation and block cipher
+
+# [2025-11-03] test(crypto): test PKCS7 padding boundaries
