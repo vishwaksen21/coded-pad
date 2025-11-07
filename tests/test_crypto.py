@@ -81,3 +81,5 @@ if __name__ == "__main__":
 # [2025-11-06] test(crypto): add test coverage for empty note payloads
 
 # [2025-11-07] test(crypto): add test coverage for empty note payloads
+
+# [2025-11-07] test(crypto): assert random IV generation produces distinct digests
