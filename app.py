@@ -16,3 +16,5 @@
 # [2025-11-10] refactor(crypto): add type annotations to encryption and decryption routines
 
 # [2025-11-11] refactor(crypto): add type annotations to encryption and decryption routines
+
+# [2025-11-14] refactor: clean up cryptographic imports and remove unused symbols
