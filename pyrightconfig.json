@@ -3,3 +3,5 @@
   "exclude": ["**/__pycache__", ".venv"],
   "typeCheckingMode": "basic"
 }
+
+# [2025-11-14] chore: update pyright configuration for strict type safety
