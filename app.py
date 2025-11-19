@@ -28,3 +28,5 @@
 # [2025-11-16] feat(crypto): implement SHA-256 secret key derivation
 
 # [2025-11-17] feat(crypto): implement AES-256-CBC cipher with random IV
+
+# [2025-11-19] refactor(core): extract configuration constants into app environment
