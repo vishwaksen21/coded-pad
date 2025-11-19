@@ -95,3 +95,5 @@ if __name__ == "__main__":
 # [2025-11-13] test(crypto): add test case for decryption with incorrect secret key
 
 # [2025-11-17] test(crypto): add test suite for key derivation and block cipher
+
+# [2025-11-19] test(crypto): test PKCS7 padding boundaries
