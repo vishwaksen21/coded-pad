@@ -30,3 +30,5 @@
 # [2025-11-17] feat(crypto): implement AES-256-CBC cipher with random IV
 
 # [2025-11-19] refactor(core): extract configuration constants into app environment
+
+# [2025-11-21] refactor(core): extract configuration constants into app environment
