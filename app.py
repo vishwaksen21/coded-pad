@@ -32,3 +32,5 @@
 # [2025-11-19] refactor(core): extract configuration constants into app environment
 
 # [2025-11-21] refactor(core): extract configuration constants into app environment
+
+# [2025-11-21] feat(api): define health check routing and uptime responses
