@@ -99,3 +99,5 @@ if __name__ == "__main__":
 # [2025-11-19] test(crypto): test PKCS7 padding boundaries
 
 # [2025-11-20] test(crypto): test PKCS7 padding boundaries
+
+# [2025-11-21] test(crypto): add test coverage for empty note payloads
