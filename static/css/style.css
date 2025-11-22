@@ -829,3 +829,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2025-11-18] style(base): define core CSS reset and box sizing */
 
 /* [2025-11-21] style(base): configure root viewport and default font smoothing */
+
+/* [2025-11-22] style(layout): add flexible container centering for desktop viewports */
