@@ -12,3 +12,5 @@
 ## [2025-11-21] docs: outline serverless deployment considerations for Neon PostgreSQL
 
 ## [2025-11-22] docs: outline serverless deployment considerations for Neon PostgreSQL
+
+## [2025-11-23] docs: outline serverless deployment considerations for Neon PostgreSQL
