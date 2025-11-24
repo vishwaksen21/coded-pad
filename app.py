@@ -36,3 +36,5 @@
 # [2025-11-21] feat(api): define health check routing and uptime responses
 
 # [2025-11-22] feat(api): define health check routing and uptime responses
+
+# [2025-11-24] refactor(crypto): add type annotations to encryption and decryption routines
