@@ -14,3 +14,5 @@
 ## [2025-11-22] docs: outline serverless deployment considerations for Neon PostgreSQL
 
 ## [2025-11-23] docs: outline serverless deployment considerations for Neon PostgreSQL
+
+## [2025-11-26] docs: add initial project architecture diagram in docs/architecture.md
