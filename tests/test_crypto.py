@@ -111,3 +111,5 @@ if __name__ == "__main__":
 # [2025-11-25] test(crypto): test exotic unicode and multi-byte character strings
 
 # [2025-11-26] test(crypto): test exotic unicode and multi-byte character strings
+
+# [2025-11-27] test(crypto): add test case for decryption with incorrect secret key
