@@ -48,3 +48,5 @@
 # [2025-11-28] feat(core): initialize Flask serverless application structure
 
 # [2025-11-28] feat(crypto): implement SHA-256 secret key derivation
+
+# [2025-11-29] refactor: clean up cryptographic imports and remove unused symbols
