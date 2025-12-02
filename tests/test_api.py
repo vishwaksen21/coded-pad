@@ -59,3 +59,5 @@ if __name__ == "__main__":
     unittest.main()
 
 # [2025-12-02] test(api): add test case for missing secret code rejection
+
+# [2025-12-02] test(api): assert HTTP 413 response on oversized payloads
