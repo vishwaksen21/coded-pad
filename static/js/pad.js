@@ -303,3 +303,5 @@ window.addEventListener("beforeunload", (e) => {
 initTheme();
 initFont();
 updateStats();
+
+/* [2025-12-02] feat(editor): prevent overlapping background save requests */
