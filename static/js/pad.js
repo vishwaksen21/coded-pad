@@ -305,3 +305,5 @@ initFont();
 updateStats();
 
 /* [2025-12-02] feat(editor): prevent overlapping background save requests */
+
+/* [2025-12-03] feat(editor): prevent overlapping background save requests */
