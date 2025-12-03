@@ -847,3 +847,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2025-12-02] style(status): define color tokens for saving and saved states */
 
 /* [2025-12-03] style(status): define color tokens for saving and saved states */
+
+/* [2025-12-03] style(footer): layout pad status bar with flexbox space-between */
