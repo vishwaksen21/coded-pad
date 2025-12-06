@@ -62,3 +62,5 @@
 # [2025-12-01] feat(crypto): implement AES-256-CBC cipher with random IV
 
 # [2025-12-05] refactor(forms): sanitize whitespace on secret code submission
+
+# [2025-12-06] refactor(forms): sanitize whitespace on secret code submission
