@@ -309,3 +309,5 @@ updateStats();
 /* [2025-12-03] feat(editor): prevent overlapping background save requests */
 
 /* [2025-12-04] feat(editor): prevent overlapping background save requests */
+
+/* [2025-12-08] feat(editor): implement debounced autosave listener in pad.js */
