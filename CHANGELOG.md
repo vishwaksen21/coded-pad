@@ -10,3 +10,5 @@
 ## [2025-12-06] chore: update changelog for autosave and validation engine
 
 ## [2025-12-07] chore: update changelog for autosave and validation engine
+
+## [2025-12-08] chore: update changelog for autosave and validation engine
