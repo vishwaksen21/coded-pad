@@ -66,3 +66,5 @@
 # [2025-12-06] refactor(forms): sanitize whitespace on secret code submission
 
 # [2025-12-08] feat(api): implement /api/save endpoint with payload validation
+
+# [2025-12-09] feat(api): implement /api/save endpoint with payload validation
