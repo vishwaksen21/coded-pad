@@ -313,3 +313,5 @@ updateStats();
 /* [2025-12-08] feat(editor): implement debounced autosave listener in pad.js */
 
 /* [2025-12-09] feat(editor): implement debounced autosave listener in pad.js */
+
+/* [2025-12-11] feat(editor): add keyboard shortcut listener for Ctrl+S and Cmd+S */
