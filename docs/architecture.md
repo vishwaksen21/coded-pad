@@ -20,3 +20,5 @@
 ## [2025-11-27] docs: add initial project architecture diagram in docs/architecture.md
 
 ## [2025-12-11] docs: document serverless SQLite and Neon connection lifecycle
+
+## [2025-12-12] docs: document serverless SQLite and Neon connection lifecycle
