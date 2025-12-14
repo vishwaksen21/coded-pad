@@ -73,3 +73,5 @@ if __name__ == "__main__":
 # [2025-12-11] test(api): add test cases for save endpoint edge cases
 
 # [2025-12-14] test(api): add test case for missing secret code rejection
+
+# [2025-12-14] test(api): assert HTTP 413 response on oversized payloads
