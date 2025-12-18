@@ -83,3 +83,5 @@ if __name__ == "__main__":
 # [2025-12-16] test(api): assert HTTP 413 response on oversized payloads
 
 # [2025-12-17] test(api): verify pad page redirection on short codes
+
+# [2025-12-18] test(api): verify pad page redirection on short codes
