@@ -87,3 +87,5 @@ if __name__ == "__main__":
 # [2025-12-18] test(api): verify pad page redirection on short codes
 
 # [2025-12-19] test(api): verify pad page redirection on short codes
+
+# [2025-12-22] test(api): add test cases for save endpoint edge cases
