@@ -22,3 +22,5 @@
 ## [2025-12-19] chore: update changelog for autosave and validation engine
 
 ## [2025-12-20] chore: update changelog for autosave and validation engine
+
+## [2025-12-23] chore: update changelog for editor interaction milestones
