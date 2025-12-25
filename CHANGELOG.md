@@ -26,3 +26,5 @@
 ## [2025-12-23] chore: update changelog for editor interaction milestones
 
 ## [2025-12-24] chore: update changelog for editor interaction milestones
+
+## [2025-12-25] chore: update changelog for editor interaction milestones
