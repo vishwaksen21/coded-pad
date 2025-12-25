@@ -335,3 +335,5 @@ updateStats();
 /* [2025-12-23] feat(editor): add keyboard shortcut listener for Ctrl+S and Cmd+S */
 
 /* [2025-12-24] feat(editor): add keyboard shortcut listener for Ctrl+S and Cmd+S */
+
+/* [2025-12-25] refactor(editor): encapsulate debounce timer in module scope */
