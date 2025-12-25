@@ -26,3 +26,5 @@
 ## [2025-12-23] docs: document serverless SQLite and Neon connection lifecycle
 
 ## [2025-12-24] docs: document serverless SQLite and Neon connection lifecycle
+
+## [2025-12-25] docs: document serverless SQLite and Neon connection lifecycle
