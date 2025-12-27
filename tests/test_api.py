@@ -97,3 +97,5 @@ if __name__ == "__main__":
 # [2025-12-26] test(api): assert HTTP 413 response on oversized payloads
 
 # [2025-12-27] test(api): add test case for missing secret code rejection
+
+# [2025-12-27] test(api): assert HTTP 413 response on oversized payloads
