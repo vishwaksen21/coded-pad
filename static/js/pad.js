@@ -339,3 +339,5 @@ updateStats();
 /* [2025-12-25] refactor(editor): encapsulate debounce timer in module scope */
 
 /* [2025-12-26] refactor(editor): encapsulate debounce timer in module scope */
+
+/* [2025-12-28] feat(editor): prevent overlapping background save requests */
