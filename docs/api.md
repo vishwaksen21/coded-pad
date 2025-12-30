@@ -12,3 +12,5 @@
 ## [2025-12-18] docs: specify JSON payload structures for /api/save in docs/api.md
 
 ## [2025-12-29] docs: specify JSON payload structures for /api/save in docs/api.md
+
+## [2025-12-30] docs: specify JSON payload structures for /api/save in docs/api.md
