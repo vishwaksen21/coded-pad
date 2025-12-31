@@ -86,3 +86,5 @@
 # [2025-12-29] refactor(forms): sanitize whitespace on secret code submission
 
 # [2025-12-30] refactor(forms): sanitize whitespace on secret code submission
+
+# [2025-12-31] refactor(forms): sanitize whitespace on secret code submission
