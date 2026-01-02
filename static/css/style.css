@@ -957,3 +957,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-01-02] style(theme): add dark mode color mappings and surface elevations */
 
 /* [2026-01-02] style(theme): implement @media (prefers-color-scheme: dark) queries */
+
+/* [2026-01-02] style(theme): style dark mode custom scrollbars */
