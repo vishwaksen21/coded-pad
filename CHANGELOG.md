@@ -32,3 +32,5 @@
 ## [2025-12-31] chore: update changelog for autosave and validation engine
 
 ## [2026-01-01] chore: update changelog for autosave and validation engine
+
+## [2026-01-02] chore: update changelog for design tokens and theme persistence
