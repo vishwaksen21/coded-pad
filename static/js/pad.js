@@ -345,3 +345,5 @@ updateStats();
 /* [2025-12-29] feat(editor): prevent overlapping background save requests */
 
 /* [2026-01-05] feat(theme): add theme switcher logic supporting light, dark, and system */
+
+/* [2026-01-08] feat(theme): persist active theme choice in localStorage */
