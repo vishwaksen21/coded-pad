@@ -34,3 +34,5 @@ if __name__ == "__main__":
 # [2026-01-06] test(ui): verify dark mode CSS selectors and contrast values
 
 # [2026-01-07] test(ui): verify dark mode CSS selectors and contrast values
+
+# [2026-01-09] test(theme): verify data-theme attribute binding on root element
