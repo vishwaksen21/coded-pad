@@ -353,3 +353,5 @@ updateStats();
 /* [2026-01-09] feat(theme): persist active theme choice in localStorage */
 
 /* [2026-01-09] refactor(theme): cycle through system, light, and dark modes cleanly */
+
+/* [2026-01-10] refactor(theme): cycle through system, light, and dark modes cleanly */
