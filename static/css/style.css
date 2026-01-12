@@ -1001,3 +1001,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-01-12] style(theme): ensure dark mode text meets WCAG AA contrast ratio */
 
 /* [2026-01-12] style(tokens): introduce CSS custom properties for color palette */
+
+/* [2026-01-12] style(theme): add dark mode color mappings and surface elevations */
