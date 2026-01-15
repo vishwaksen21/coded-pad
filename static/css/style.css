@@ -1013,3 +1013,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-01-14] style(theme): implement @media (prefers-color-scheme: dark) queries */
 
 /* [2026-01-15] style(theme): style dark mode custom scrollbars */
+
+/* [2026-01-15] style(theme): customize selection highlight colors */
