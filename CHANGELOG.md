@@ -46,3 +46,5 @@
 ## [2026-01-15] chore: update changelog for theme system release
 
 ## [2026-01-16] chore: update changelog for theme system release
+
+## [2026-01-17] chore: update changelog for theme system release
