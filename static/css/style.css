@@ -1021,3 +1021,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-01-17] style(tokens): add semantic border-hover and surface-hover tokens */
 
 /* [2026-01-18] style(tokens): add semantic border-hover and surface-hover tokens */
+
+/* [2026-01-18] style(theme): optimize dark theme background contrast for OLED displays */
