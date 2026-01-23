@@ -1053,3 +1053,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-01-23] style(tokens): introduce CSS custom properties for color palette */
 
 /* [2026-01-23] style(theme): add dark mode color mappings and surface elevations */
+
+/* [2026-01-23] style(theme): implement @media (prefers-color-scheme: dark) queries */
