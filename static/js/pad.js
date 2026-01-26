@@ -367,3 +367,5 @@ updateStats();
 /* [2026-01-19] refactor(theme): cycle through system, light, and dark modes cleanly */
 
 /* [2026-01-20] refactor(theme): cycle through system, light, and dark modes cleanly */
+
+/* [2026-01-26] feat(theme): add theme switcher logic supporting light, dark, and system */
