@@ -369,3 +369,5 @@ updateStats();
 /* [2026-01-20] refactor(theme): cycle through system, light, and dark modes cleanly */
 
 /* [2026-01-26] feat(theme): add theme switcher logic supporting light, dark, and system */
+
+/* [2026-01-28] feat(theme): persist active theme choice in localStorage */
