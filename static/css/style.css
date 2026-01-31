@@ -1085,3 +1085,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-01-30] style(theme): add smooth transitions for background and color tokens */
 
 /* [2026-01-31] style(icons): add dynamic sun, moon, and half-moon icon states */
+
+/* [2026-01-31] style(tokens): introduce primary-light and danger-light token pairs */
