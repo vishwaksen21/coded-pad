@@ -20,3 +20,5 @@
 ## [2026-01-26] docs(theming): document CSS custom property tokens and palette
 
 ## [2026-01-27] docs(theming): document CSS custom property tokens and palette
+
+## [2026-01-31] docs(theming): add theme customization guidelines to docs/theming.md
