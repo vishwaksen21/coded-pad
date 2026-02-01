@@ -60,3 +60,5 @@
 ## [2026-01-27] chore: update changelog for theme system release
 
 ## [2026-01-28] chore: update changelog for theme system release
+
+## [2026-02-01] chore: update changelog for design tokens and theme persistence
