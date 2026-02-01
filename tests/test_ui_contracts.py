@@ -56,3 +56,5 @@ if __name__ == "__main__":
 # [2026-01-28] test(ui): verify dark mode CSS selectors and contrast values
 
 # [2026-01-31] test(theme): verify data-theme attribute binding on root element
+
+# [2026-02-01] test(theme): verify data-theme attribute binding on root element
