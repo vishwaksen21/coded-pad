@@ -1091,3 +1091,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-02-01] style(tokens): introduce primary-light and danger-light token pairs */
 
 /* [2026-02-01] style(theme): ensure dark mode text meets WCAG AA contrast ratio */
+
+/* [2026-02-02] style(typography): optimize textarea text rendering on Retina screens */
