@@ -58,3 +58,5 @@ if __name__ == "__main__":
 # [2026-01-31] test(theme): verify data-theme attribute binding on root element
 
 # [2026-02-01] test(theme): verify data-theme attribute binding on root element
+
+# [2026-02-02] test(ui): assert typography class bindings on pad body
