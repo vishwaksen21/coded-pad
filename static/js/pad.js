@@ -379,3 +379,5 @@ updateStats();
 /* [2026-01-31] refactor(theme): cycle through system, light, and dark modes cleanly */
 
 /* [2026-02-04] refactor(typography): ensure zero layout shift during font toggles */
+
+/* [2026-02-05] refactor(typography): ensure zero layout shift during font toggles */
