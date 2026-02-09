@@ -64,3 +64,5 @@ if __name__ == "__main__":
 # [2026-02-05] test(typography): test font switching event listener response
 
 # [2026-02-06] test(typography): test font switching event listener response
+
+# [2026-02-09] test(ui): assert typography class bindings on pad body
