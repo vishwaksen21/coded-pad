@@ -26,3 +26,5 @@
 ## [2026-02-01] docs(theming): add theme customization guidelines to docs/theming.md
 
 ## [2026-02-09] docs(typography): document font selection rationale and readability benchmarks
+
+## [2026-02-10] docs(typography): document font selection rationale and readability benchmarks
