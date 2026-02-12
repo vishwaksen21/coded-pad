@@ -72,3 +72,5 @@
 ## [2026-02-07] chore: update changelog for multi-font typography release
 
 ## [2026-02-11] chore: update changelog for typography engine release
+
+## [2026-02-12] chore: update changelog for typography engine release
