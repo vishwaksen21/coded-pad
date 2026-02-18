@@ -28,3 +28,5 @@
 ## [2026-02-09] docs(typography): document font selection rationale and readability benchmarks
 
 ## [2026-02-10] docs(typography): document font selection rationale and readability benchmarks
+
+## [2026-02-18] docs(typography): document font selection rationale and readability benchmarks
