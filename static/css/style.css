@@ -1153,3 +1153,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-02-17] style(fonts): import Inter, Lora, and JetBrains Mono from Google Fonts */
 
 /* [2026-02-17] style(typography): define font-family utility classes for sans, serif, mono */
+
+/* [2026-02-18] style(typography): tune line-height and letter-spacing for editorial reading */
