@@ -395,3 +395,5 @@ updateStats();
 /* [2026-02-17] feat(typography): persist chosen font preference in localStorage */
 
 /* [2026-02-18] feat(typography): persist chosen font preference in localStorage */
+
+/* [2026-02-21] refactor(typography): ensure zero layout shift during font toggles */
