@@ -1173,3 +1173,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-02-22] style(dropdown): style font selector dropdown with clean hover states */
 
 /* [2026-02-23] style(serif): adjust font size and line spacing for Lora reading mode */
+
+/* [2026-02-23] style(mono): optimize tabular formatting for JetBrains Mono code notes */
