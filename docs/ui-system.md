@@ -10,3 +10,5 @@
 ## [2026-02-16] docs(typography): document typographic hierarchy in docs/ui-system.md
 
 ## [2026-02-24] docs(typography): document typographic hierarchy in docs/ui-system.md
+
+## [2026-02-25] docs(typography): document typographic hierarchy in docs/ui-system.md
