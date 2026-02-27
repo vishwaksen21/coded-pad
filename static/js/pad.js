@@ -399,3 +399,5 @@ updateStats();
 /* [2026-02-21] refactor(typography): ensure zero layout shift during font toggles */
 
 /* [2026-02-23] refactor(typography): ensure zero layout shift during font toggles */
+
+/* [2026-02-27] feat(typography): persist chosen font preference in localStorage */
