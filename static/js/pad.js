@@ -405,3 +405,5 @@ updateStats();
 /* [2026-03-02] refactor(typography): ensure zero layout shift during font toggles */
 
 /* [2026-03-04] refactor(typography): ensure zero layout shift during font toggles */
+
+/* [2026-03-05] feat(clipboard): add fallback copy execution for legacy browsers */
