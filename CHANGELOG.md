@@ -92,3 +92,5 @@
 ## [2026-03-01] chore: update changelog for typography engine release
 
 ## [2026-03-02] chore: update changelog for typography engine release
+
+## [2026-03-08] chore: update changelog for export and modal actions
