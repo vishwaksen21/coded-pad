@@ -411,3 +411,5 @@ updateStats();
 /* [2026-03-05] feat(export): implement Markdown (.md) note export via Blob download */
 
 /* [2026-03-06] feat(export): implement Plain Text (.txt) note export via Blob download */
+
+/* [2026-03-10] refactor(export): format export filenames with pad key and timestamp */
