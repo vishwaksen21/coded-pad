@@ -80,3 +80,5 @@ if __name__ == "__main__":
 # [2026-02-28] test(ui): assert typography class bindings on pad body
 
 # [2026-03-01] test(ui): assert typography class bindings on pad body
+
+# [2026-03-11] test(ui): assert presence of export menu and modal dialog
