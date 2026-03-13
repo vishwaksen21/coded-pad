@@ -419,3 +419,5 @@ updateStats();
 /* [2026-03-13] feat(clipboard): add fallback copy execution for legacy browsers */
 
 /* [2026-03-13] feat(export): implement Markdown (.md) note export via Blob download */
+
+/* [2026-03-13] feat(export): implement Plain Text (.txt) note export via Blob download */
