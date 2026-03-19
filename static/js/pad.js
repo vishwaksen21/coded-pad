@@ -433,3 +433,5 @@ updateStats();
 /* [2026-03-15] feat(export): implement Plain Text (.txt) note export via Blob download */
 
 /* [2026-03-19] refactor(export): format export filenames with pad key and timestamp */
+
+/* [2026-03-19] feat(modal): wire cancel and confirm buttons to modal lifecycle */
