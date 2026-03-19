@@ -84,3 +84,5 @@ if __name__ == "__main__":
 # [2026-03-11] test(ui): assert presence of export menu and modal dialog
 
 # [2026-03-12] test(ui): assert presence of export menu and modal dialog
+
+# [2026-03-19] test(ui): assert presence of export menu and modal dialog
