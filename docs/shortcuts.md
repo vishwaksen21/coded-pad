@@ -6,3 +6,5 @@
 ## [2026-03-13] docs: document export and clipboard workflow in docs/shortcuts.md
 
 ## [2026-03-18] docs(shortcuts): create keyboard shortcuts and action guide
+
+## [2026-03-20] docs: document export and clipboard workflow in docs/shortcuts.md
