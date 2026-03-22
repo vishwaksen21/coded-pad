@@ -10,3 +10,5 @@
 ## [2026-03-20] docs: document export and clipboard workflow in docs/shortcuts.md
 
 ## [2026-03-21] docs: document export and clipboard workflow in docs/shortcuts.md
+
+## [2026-03-22] docs: document export and clipboard workflow in docs/shortcuts.md
