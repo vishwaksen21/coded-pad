@@ -451,3 +451,5 @@ updateStats();
 /* [2026-03-24] feat(export): implement Markdown (.md) note export via Blob download */
 
 /* [2026-03-24] feat(export): implement Plain Text (.txt) note export via Blob download */
+
+/* [2026-03-25] feat(export): implement Plain Text (.txt) note export via Blob download */
