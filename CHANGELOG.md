@@ -108,3 +108,5 @@
 ## [2026-03-22] chore: update changelog for clipboard and export features
 
 ## [2026-03-23] chore: update changelog for clipboard and export features
+
+## [2026-03-26] chore: update changelog for export and modal actions
