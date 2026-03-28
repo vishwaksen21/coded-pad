@@ -453,3 +453,5 @@ updateStats();
 /* [2026-03-24] feat(export): implement Plain Text (.txt) note export via Blob download */
 
 /* [2026-03-25] feat(export): implement Plain Text (.txt) note export via Blob download */
+
+/* [2026-03-28] refactor(export): format export filenames with pad key and timestamp */
