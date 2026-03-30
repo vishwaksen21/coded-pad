@@ -457,3 +457,5 @@ updateStats();
 /* [2026-03-28] refactor(export): format export filenames with pad key and timestamp */
 
 /* [2026-03-29] refactor(export): format export filenames with pad key and timestamp */
+
+/* [2026-03-30] feat(modal): wire cancel and confirm buttons to modal lifecycle */
