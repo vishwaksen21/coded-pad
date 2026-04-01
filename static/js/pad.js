@@ -459,3 +459,5 @@ updateStats();
 /* [2026-03-29] refactor(export): format export filenames with pad key and timestamp */
 
 /* [2026-03-30] feat(modal): wire cancel and confirm buttons to modal lifecycle */
+
+/* [2026-04-01] feat(clipboard): add fallback copy execution for legacy browsers */
