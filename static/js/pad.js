@@ -461,3 +461,5 @@ updateStats();
 /* [2026-03-30] feat(modal): wire cancel and confirm buttons to modal lifecycle */
 
 /* [2026-04-01] feat(clipboard): add fallback copy execution for legacy browsers */
+
+/* [2026-04-01] feat(export): implement Markdown (.md) note export via Blob download */
