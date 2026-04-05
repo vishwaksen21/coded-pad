@@ -1273,3 +1273,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-04-04] style(modal): style confirmation modal dialog and backdrop blur */
 
 /* [2026-04-05] style(stats): apply tabular-nums font variant to prevent layout jitter */
+
+/* [2026-04-05] style(stats): style subtle pill borders and badge backgrounds */
