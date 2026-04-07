@@ -475,3 +475,5 @@ updateStats();
 /* [2026-04-03] feat(export): implement Markdown (.md) note export via Blob download */
 
 /* [2026-04-03] feat(export): implement Plain Text (.txt) note export via Blob download */
+
+/* [2026-04-07] refactor(stats): optimize regex word splitting for multiline text */
