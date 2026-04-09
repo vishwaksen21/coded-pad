@@ -98,3 +98,5 @@ if __name__ == "__main__":
 # [2026-04-05] test(stats): add unit tests for stats calculation and whitespace normalization
 
 # [2026-04-06] test(stats): add unit tests for stats calculation and whitespace normalization
+
+# [2026-04-09] test(stats): test reading time estimation formula accuracy
