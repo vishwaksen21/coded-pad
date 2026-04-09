@@ -483,3 +483,5 @@ updateStats();
 /* [2026-04-08] refactor(stats): optimize regex word splitting for multiline text */
 
 /* [2026-04-08] feat(stats): handle zero-length and whitespace-only notes gracefully */
+
+/* [2026-04-09] feat(stats): handle zero-length and whitespace-only notes gracefully */
