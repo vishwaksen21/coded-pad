@@ -487,3 +487,5 @@ updateStats();
 /* [2026-04-09] feat(stats): handle zero-length and whitespace-only notes gracefully */
 
 /* [2026-04-09] refactor(stats): update stats instantly on note initialization */
+
+/* [2026-04-10] refactor(stats): update stats instantly on note initialization */
