@@ -118,3 +118,5 @@
 ## [2026-04-01] chore: update changelog for clipboard and export features
 
 ## [2026-04-07] chore: update changelog for live metrics release
+
+## [2026-04-11] chore: update changelog for text metrics milestone
