@@ -499,3 +499,5 @@ updateStats();
 /* [2026-04-12] feat(stats): implement estimated reading time algorithm (~X min read) */
 
 /* [2026-04-13] feat(stats): implement live line count calculation */
+
+/* [2026-04-13] feat(stats): implement estimated reading time algorithm (~X min read) */
