@@ -513,3 +513,5 @@ updateStats();
 /* [2026-04-18] feat(stats): handle zero-length and whitespace-only notes gracefully */
 
 /* [2026-04-19] refactor(stats): update stats instantly on note initialization */
+
+/* [2026-04-19] feat(stats): implement live word count calculation */
