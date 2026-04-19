@@ -124,3 +124,5 @@
 ## [2026-04-15] chore: update changelog for live metrics release
 
 ## [2026-04-16] chore: update changelog for live metrics release
+
+## [2026-04-19] chore: update changelog for text metrics milestone
