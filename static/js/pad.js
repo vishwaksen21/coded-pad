@@ -533,3 +533,5 @@ updateStats();
 /* [2026-04-22] feat(stats): implement estimated reading time algorithm (~X min read) */
 
 /* [2026-04-25] refactor(stats): optimize regex word splitting for multiline text */
+
+/* [2026-04-25] feat(stats): handle zero-length and whitespace-only notes gracefully */
