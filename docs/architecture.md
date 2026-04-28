@@ -50,3 +50,5 @@
 ## [2026-04-25] docs: document text statistics calculation rules
 
 ## [2026-04-27] docs: add real-time text analysis specs in docs/architecture.md
+
+## [2026-04-28] docs: add real-time text analysis specs in docs/architecture.md
