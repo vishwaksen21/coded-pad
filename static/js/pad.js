@@ -545,3 +545,5 @@ updateStats();
 /* [2026-04-27] refactor(stats): update stats instantly on note initialization */
 
 /* [2026-04-28] refactor(stats): update stats instantly on note initialization */
+
+/* [2026-04-28] feat(stats): implement live word count calculation */
