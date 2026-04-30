@@ -555,3 +555,5 @@ updateStats();
 /* [2026-04-30] feat(stats): implement live word count calculation */
 
 /* [2026-04-30] feat(stats): implement live character count calculation */
+
+/* [2026-04-30] feat(stats): implement live line count calculation */
