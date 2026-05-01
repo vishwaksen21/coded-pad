@@ -116,3 +116,5 @@ if __name__ == "__main__":
 # [2026-04-27] test(stats): test reading time estimation formula accuracy
 
 # [2026-04-28] test(stats): test reading time estimation formula accuracy
+
+# [2026-05-01] test(stats): add unit tests for stats calculation and whitespace normalization
