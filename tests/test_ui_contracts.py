@@ -124,3 +124,5 @@ if __name__ == "__main__":
 # [2026-05-03] test(stats): add unit tests for stats calculation and whitespace normalization
 
 # [2026-05-05] test(stats): test reading time estimation formula accuracy
+
+# [2026-05-07] test(home): assert presence of key generator button and peek toggle
