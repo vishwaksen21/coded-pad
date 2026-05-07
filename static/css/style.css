@@ -1,0 +1,222 @@
+/* ================================================================
+   Coded Pad – Stylesheet (v2 — minimal, secret-code flow)
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg:         #f5f7fa;
+    --surface:    #ffffff;
+    --border:     #dde1e9;
+    --primary:    #4361ee;
+    --primary-dk: #3451d1;
+    --danger:     #e63946;
+    --success:    #2a9d8f;
+    --text:       #1a1c23;
+    --muted:      #6b7280;
+    --radius:     8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+/* ── HOME PAGE ─────────────────────────────────────────────────── */
+
+.home-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+}
+
+.home-center {
+    text-align: center;
+    padding: 24px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.home-logo { font-size: 3rem; margin-bottom: 12px; }
+
+.home-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.home-sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.home-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.home-input {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    text-align: center;
+    letter-spacing: 0.04em;
+    transition: border-color 0.2s;
+}
+
+.home-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.home-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.home-btn:hover  { background: var(--primary-dk); }
+.home-btn:active { transform: scale(0.97); }
+
+.home-hint {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+/* ── PAD (EDITOR) PAGE ─────────────────────────────────────────── */
+
+.pad-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+}
+
+/* Top bar */
+.pad-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    gap: 12px;
+}
+
+.pad-logo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.pad-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pad-divider { opacity: 0.4; }
+
+.pad-code-label strong { color: var(--text); }
+
+.save-status {
+    font-weight: 500;
+    color: var(--success);
+    min-width: 120px;
+    text-align: right;
+}
+
+/* Save button */
+.pad-save-btn {
+    padding: 7px 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.pad-save-btn:hover    { background: var(--primary-dk); }
+.pad-save-btn:disabled { opacity: 0.6; cursor: default; }
+
+/* The note textarea — fills remaining height */
+.pad-textarea {
+    flex: 1;
+    width: 100%;
+    padding: 32px 10%;        /* generous side margins */
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text);
+    border: none;
+    resize: none;
+    outline: none;
+    background: var(--surface);
+    min-height: calc(100vh - 100px);
+}
+
+/* Footer */
+.pad-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pad-close-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+.pad-close-link:hover { text-decoration: underline; }
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+    .pad-textarea    { padding: 24px 5%; }
+    .pad-meta        { display: none; }     /* hide code label on mobile */
+    .pad-footer      { flex-direction: column; align-items: flex-start; }
+}

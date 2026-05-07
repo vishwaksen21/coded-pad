@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coded Pad – Your Note</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="pad-body">
+
+    <!-- ── Top Bar ── -->
+    <header class="pad-header">
+        <a href="/" class="pad-logo">🔒 Coded Pad</a>
+
+        <div class="pad-meta">
+            <span id="saveStatus" class="save-status">All changes saved</span>
+            <span class="pad-divider">|</span>
+            <span class="pad-code-label">Code: <strong>{{ secret_code }}</strong></span>
+        </div>
+
+        <button class="pad-save-btn" id="saveBtn" onclick="saveNote()">Save</button>
+    </header>
+
+    <!-- ── Note Textarea ── -->
+    <textarea
+        id="noteArea"
+        class="pad-textarea"
+        placeholder="Start typing your note here..."
+        spellcheck="true"
+    >{{ note }}</textarea>
+
+    <!-- ── Footer ── -->
+    <footer class="pad-footer">
+        <span>Created: {{ created_time }}</span>
+        <span id="updatedTime">Last saved: {{ updated_time }}</span>
+        <a href="/" class="pad-close-link">← Switch Note</a>
+    </footer>
+
+    <!-- Pass secret_code to JavaScript safely -->
+    <script>
+        const SECRET_CODE = {{ secret_code | tojson }};
+    </script>
+    <script src="/static/js/pad.js"></script>
+
+</body>
+</html>

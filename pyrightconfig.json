@@ -1,0 +1,9 @@
+{
+    "pythonVersion": "3.14",
+    "pythonPlatform": "Darwin",
+    "venvPath": "/Library/Frameworks/Python.framework/Versions/3.14",
+    "pythonInterpreter": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+    "typeCheckingMode": "basic",
+    "reportMissingImports": false,
+    "reportMissingModuleSource": false
+}

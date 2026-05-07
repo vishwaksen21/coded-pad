@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Note – Coded Pad</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+    <!-- ── Navigation ── -->
+    <nav class="navbar">
+        <div class="nav-brand">🔒 Coded Pad</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/create">Create Note</a>
+            <a href="/view">Open Note</a>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="form-container">
+            <h1>Create a Secure Note</h1>
+            <p class="form-subtitle">Write your note, set a password, and get a unique ID to share or save.</p>
+
+            <!-- Note creation form -->
+            <form id="createForm">
+
+                <!-- Note text area -->
+                <div class="form-group">
+                    <label for="noteText">Your Note</label>
+                    <textarea
+                        id="noteText"
+                        name="note"
+                        rows="10"
+                        placeholder="Write your note here..."
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Password field -->
+                <div class="form-group">
+                    <label for="notePassword">Password (min 4 characters)</label>
+                    <input
+                        type="password"
+                        id="notePassword"
+                        name="password"
+                        placeholder="Enter a password to lock this note"
+                        minlength="4"
+                        required
+                    />
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-full" id="saveBtn">
+                    🔒 Save & Encrypt Note
+                </button>
+
+            </form>
+
+            <!-- Success box (hidden by default) -->
+            <div id="successBox" class="result-box success-box hidden">
+                <h3>✅ Note Saved!</h3>
+                <p>Your note ID is:</p>
+                <div class="note-id-display" id="generatedId"></div>
+                <p class="tip">
+                    <strong>Save this ID!</strong> You'll need it along with your password to view the note.
+                </p>
+                <div class="action-row">
+                    <button onclick="copyId()" class="btn btn-secondary">📋 Copy ID</button>
+                    <a href="/create" class="btn btn-primary">✏️ New Note</a>
+                    <a href="/view" class="btn btn-secondary">🔍 View a Note</a>
+                </div>
+            </div>
+
+            <!-- Error box (hidden by default) -->
+            <div id="errorBox" class="result-box error-box hidden">
+                <p id="errorMsg">Something went wrong.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Coded Pad &mdash; AES-256 encrypted notes</p>
+    </footer>
+
+    <script src="/static/js/create.js"></script>
+
+</body>
+</html>

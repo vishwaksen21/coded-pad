@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coded Pad – Your Secret Notepad</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body class="home-body">
+
+    <main class="home-center">
+
+        <div class="home-logo">🔒</div>
+        <h1 class="home-title">Coded Pad</h1>
+        <p class="home-sub">Enter your secret code to open or create your private note.</p>
+
+        <!-- Single form: just the secret code -->
+        <form class="home-form" action="/open" method="POST">
+            <input
+                type="text"
+                id="secret_code"
+                name="secret_code"
+                class="home-input"
+                placeholder="Enter your secret code..."
+                minlength="3"
+                required
+                autocomplete="off"
+                autofocus
+            />
+            <button type="submit" class="home-btn">Open Pad →</button>
+        </form>
+
+        <p class="home-hint">
+            New code = new note &nbsp;·&nbsp; Same code = same note
+        </p>
+
+    </main>
+
+</body>
+</html>
