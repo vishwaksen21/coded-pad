@@ -36,29 +36,15 @@ if USE_POSTGRES and "channel_binding" in DATABASE_URL:
 # ─── Database helpers ─────────────────────────────────────────────────────────
 
 def get_db():
-    """
-    Return a database connection (PostgreSQL or SQLite).
-    For PostgreSQL (Neon free tier), retries up to 3 times with a short delay
-    because Neon's compute may be waking from sleep on first request.
-    """
+    """Return a database connection (PostgreSQL or SQLite)."""
     if USE_POSTGRES:
         import psycopg2
         from psycopg2.extras import RealDictCursor
-        import time
-
-        last_err = None
-        for attempt in range(3):          # try up to 3 times
-            try:
-                return psycopg2.connect(
-                    DATABASE_URL,
-                    cursor_factory=RealDictCursor,
-                    connect_timeout=10    # wait up to 10 s for Neon to wake up
-                )
-            except Exception as e:
-                last_err = e
-                if attempt < 2:
-                    time.sleep(2)         # wait 2 s before retrying
-        raise last_err                    # re-raise if all attempts failed
+        return psycopg2.connect(
+            DATABASE_URL,
+            cursor_factory=RealDictCursor,
+            connect_timeout=15
+        )
     else:
         import sqlite3
         conn = sqlite3.connect("notes.db")
@@ -82,7 +68,7 @@ def run_query(sql_pg, sql_lite, params=()):
 
 
 def init_db():
-    """Create the notes table if it doesn't exist."""
+    """Create the notes table if it doesn't exist. Used mainly for local SQLite."""
     conn = get_db()
     if USE_POSTGRES:
         cur = conn.cursor()
@@ -108,12 +94,14 @@ def init_db():
     conn.commit()
     conn.close()
 
-
-# Initialise DB on cold start
-try:
-    init_db()
-except Exception as e:
-    print("[init_db] error:", e)
+# ONLY initialize database automatically for local SQLite.
+# Vercel's PostgreSQL is already initialized, running this on cold start
+# exhausts connection limits.
+if not USE_POSTGRES:
+    try:
+        init_db()
+    except Exception as e:
+        print("[init_db] error:", e)
 
 # ─── Encryption helpers ───────────────────────────────────────────────────────
 
