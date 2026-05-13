@@ -142,3 +142,5 @@
 ## [2026-05-04] chore: update changelog for live metrics release
 
 ## [2026-05-08] chore: update changelog for homepage feature enhancements
+
+## [2026-05-13] chore: update changelog for homepage overhaul
