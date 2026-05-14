@@ -126,3 +126,5 @@ if __name__ == "__main__":
 # [2026-05-05] test(stats): test reading time estimation formula accuracy
 
 # [2026-05-07] test(home): assert presence of key generator button and peek toggle
+
+# [2026-05-14] test(home): assert presence of key generator button and peek toggle
