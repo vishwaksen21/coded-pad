@@ -14,3 +14,5 @@
 ## [2025-11-30] docs: document PKCS7 block padding and CBC security guarantees
 
 ## [2026-05-08] docs: document client-side privacy model for recent pads storage
+
+## [2026-05-15] docs: document client-side privacy model for recent pads storage
