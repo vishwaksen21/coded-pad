@@ -144,3 +144,5 @@
 ## [2026-05-08] chore: update changelog for homepage feature enhancements
 
 ## [2026-05-13] chore: update changelog for homepage overhaul
+
+## [2026-05-16] chore: update changelog for homepage feature enhancements
