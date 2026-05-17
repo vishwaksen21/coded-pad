@@ -18,3 +18,5 @@
 ## [2026-05-15] docs: document client-side privacy model for recent pads storage
 
 ## [2026-05-16] docs: document client-side privacy model for recent pads storage
+
+## [2026-05-17] docs: document client-side privacy model for recent pads storage
