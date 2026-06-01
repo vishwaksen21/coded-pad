@@ -134,3 +134,5 @@ if __name__ == "__main__":
 # [2026-05-16] test(home): assert presence of key generator button and peek toggle
 
 # [2026-05-25] test(home): assert presence of key generator button and peek toggle
+
+# [2026-06-01] test(home): assert presence of key generator button and peek toggle
