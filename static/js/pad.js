@@ -575,3 +575,5 @@ updateStats();
 /* [2026-05-05] refactor(stats): update stats instantly on note initialization */
 
 /* [2026-06-06] feat(zen): bind Escape key and Ctrl+Shift+F shortcut to toggle zen mode */
+
+/* [2026-06-07] feat(zen): bind Escape key and Ctrl+Shift+F shortcut to toggle zen mode */
