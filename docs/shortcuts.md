@@ -24,3 +24,5 @@
 ## [2026-04-01] docs: document export and clipboard workflow in docs/shortcuts.md
 
 ## [2026-04-04] docs(shortcuts): create keyboard shortcuts and action guide
+
+## [2026-06-07] docs: add Zen mode usage documentation to shortcuts guide
