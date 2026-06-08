@@ -168,3 +168,5 @@
 ## [2026-06-04] chore: update changelog for homepage feature enhancements
 
 ## [2026-06-07] chore: update changelog for Zen mode release
+
+## [2026-06-08] chore: update changelog for Zen mode release
