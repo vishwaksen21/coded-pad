@@ -142,3 +142,5 @@ if __name__ == "__main__":
 # [2026-06-03] test(home): assert presence of key generator button and peek toggle
 
 # [2026-06-07] test(zen): assert zen mode DOM toggle state
+
+# [2026-06-08] test(zen): assert zen mode DOM toggle state
