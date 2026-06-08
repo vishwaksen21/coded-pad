@@ -26,3 +26,5 @@
 ## [2026-04-04] docs(shortcuts): create keyboard shortcuts and action guide
 
 ## [2026-06-07] docs: add Zen mode usage documentation to shortcuts guide
+
+## [2026-06-08] docs: add Zen mode usage documentation to shortcuts guide
