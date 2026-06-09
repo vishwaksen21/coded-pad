@@ -1429,3 +1429,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-06-08] refactor(zen): ensure textarea expands to full viewport height in zen mode */
 
 /* [2026-06-09] style(zen): add smooth opacity transitions when entering zen mode */
+
+/* [2026-06-09] refactor(zen): ensure textarea expands to full viewport height in zen mode */
