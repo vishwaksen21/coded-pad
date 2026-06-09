@@ -577,3 +577,5 @@ updateStats();
 /* [2026-06-06] feat(zen): bind Escape key and Ctrl+Shift+F shortcut to toggle zen mode */
 
 /* [2026-06-07] feat(zen): bind Escape key and Ctrl+Shift+F shortcut to toggle zen mode */
+
+/* [2026-06-09] feat(zen): notify user with toast message on zen mode activation */
