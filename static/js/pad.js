@@ -585,3 +585,5 @@ updateStats();
 /* [2026-06-11] feat(zen): implement Zen distraction-free mode toggle */
 
 /* [2026-06-12] feat(zen): implement Zen distraction-free mode toggle */
+
+/* [2026-06-13] feat(zen): implement Zen distraction-free mode toggle */
