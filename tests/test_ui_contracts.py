@@ -148,3 +148,5 @@ if __name__ == "__main__":
 # [2026-06-10] test(zen): verify escape key event listener teardown and toggle
 
 # [2026-06-11] test(zen): verify escape key event listener teardown and toggle
+
+# [2026-06-15] test(zen): assert zen mode DOM toggle state
