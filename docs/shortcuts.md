@@ -30,3 +30,5 @@
 ## [2026-06-08] docs: add Zen mode usage documentation to shortcuts guide
 
 ## [2026-06-14] docs: add Zen mode usage documentation to shortcuts guide
+
+## [2026-06-15] docs: add Zen mode usage documentation to shortcuts guide
