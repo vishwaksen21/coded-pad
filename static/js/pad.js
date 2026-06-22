@@ -599,3 +599,5 @@ updateStats();
 /* [2026-06-18] feat(zen): notify user with toast message on zen mode activation */
 
 /* [2026-06-21] feat(zen): implement Zen distraction-free mode toggle */
+
+/* [2026-06-22] feat(zen): bind Escape key and Ctrl+Shift+F shortcut to toggle zen mode */
