@@ -186,3 +186,5 @@
 ## [2026-06-19] chore: update changelog for distraction-free writing release
 
 ## [2026-06-20] chore: update changelog for distraction-free writing release
+
+## [2026-06-25] chore: update changelog for Zen mode release
