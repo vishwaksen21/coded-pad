@@ -8,3 +8,5 @@
 ## [2026-06-19] docs: update shortcuts table with Zen mode shortcut in README.md
 
 ## [2026-06-20] docs: update shortcuts table with Zen mode shortcut in README.md
+
+## [2026-06-27] docs: update shortcuts table with Zen mode shortcut in README.md
