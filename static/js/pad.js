@@ -615,3 +615,5 @@ updateStats();
 /* [2026-06-29] feat(zen): implement Zen distraction-free mode toggle */
 
 /* [2026-06-30] feat(zen): bind Escape key and Ctrl+Shift+F shortcut to toggle zen mode */
+
+/* [2026-07-01] feat(zen): bind Escape key and Ctrl+Shift+F shortcut to toggle zen mode */
