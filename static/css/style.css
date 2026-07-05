@@ -1505,3 +1505,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-07-04] refactor(zen): ensure textarea expands to full viewport height in zen mode */
 
 /* [2026-07-04] style(zen): hide scrollbars when zen mode is active on modern browsers */
+
+/* [2026-07-05] style(zen): hide scrollbars when zen mode is active on modern browsers */
