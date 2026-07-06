@@ -621,3 +621,5 @@ updateStats();
 /* [2026-07-03] feat(zen): notify user with toast message on zen mode activation */
 
 /* [2026-07-04] feat(zen): notify user with toast message on zen mode activation */
+
+/* [2026-07-06] feat(zen): implement Zen distraction-free mode toggle */
