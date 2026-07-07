@@ -1511,3 +1511,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-07-06] style(zen): define .zen-mode styles hiding header and footer toolbars */
 
 /* [2026-07-06] style(zen): style floating exit pill with smooth hover elevation */
+
+/* [2026-07-07] style(toast): design toast cards with slideUp keyframe animations */
