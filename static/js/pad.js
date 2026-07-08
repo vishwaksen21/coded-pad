@@ -625,3 +625,5 @@ updateStats();
 /* [2026-07-06] feat(zen): implement Zen distraction-free mode toggle */
 
 /* [2026-07-07] feat(toast): implement showToast helper with type variants */
+
+/* [2026-07-08] feat(guard): implement beforeunload confirmation when note has unsaved edits */
