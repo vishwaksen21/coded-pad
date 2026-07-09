@@ -1523,3 +1523,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-07-08] style(toast): implement smooth fade-out and dismiss animations */
 
 /* [2026-07-09] style(toast): implement smooth fade-out and dismiss animations */
+
+/* [2026-07-09] style(toast): configure pointer-events to prevent click blocking */
