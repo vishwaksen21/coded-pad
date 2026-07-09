@@ -200,3 +200,5 @@
 ## [2026-07-03] chore: update changelog for Zen mode release
 
 ## [2026-07-06] chore: update changelog for distraction-free writing release
+
+## [2026-07-09] chore: update changelog for toast notification framework
