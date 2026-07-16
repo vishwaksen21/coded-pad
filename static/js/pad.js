@@ -647,3 +647,5 @@ updateStats();
 /* [2026-07-15] feat(toast): implement showToast helper with type variants */
 
 /* [2026-07-15] feat(guard): implement beforeunload confirmation when note has unsaved edits */
+
+/* [2026-07-16] feat(guard): implement beforeunload confirmation when note has unsaved edits */
