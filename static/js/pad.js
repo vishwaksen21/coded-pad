@@ -651,3 +651,5 @@ updateStats();
 /* [2026-07-16] feat(guard): implement beforeunload confirmation when note has unsaved edits */
 
 /* [2026-07-16] feat(toast): trigger toast feedback on copy, save, export, and theme events */
+
+/* [2026-07-17] feat(guard): implement beforeunload confirmation when note has unsaved edits */
