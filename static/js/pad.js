@@ -663,3 +663,5 @@ updateStats();
 /* [2026-07-20] refactor(toast): auto-remove dismissed toast nodes from the DOM */
 
 /* [2026-07-20] feat(guard): reset unsaved changes flag immediately upon successful save */
+
+/* [2026-07-22] feat(toast): implement showToast helper with type variants */
