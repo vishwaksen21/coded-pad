@@ -669,3 +669,5 @@ updateStats();
 /* [2026-07-23] feat(toast): implement showToast helper with type variants */
 
 /* [2026-07-25] feat(guard): implement beforeunload confirmation when note has unsaved edits */
+
+/* [2026-07-25] feat(toast): trigger toast feedback on copy, save, export, and theme events */
