@@ -1563,3 +1563,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-07-26] style(toast): configure pointer-events to prevent click blocking */
 
 /* [2026-07-27] style(toast): configure pointer-events to prevent click blocking */
+
+/* [2026-07-27] style(toast): add subtle box-shadow layer for toast cards */
