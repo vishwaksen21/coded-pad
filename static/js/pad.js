@@ -673,3 +673,5 @@ updateStats();
 /* [2026-07-25] feat(toast): trigger toast feedback on copy, save, export, and theme events */
 
 /* [2026-07-27] refactor(toast): auto-remove dismissed toast nodes from the DOM */
+
+/* [2026-07-27] feat(guard): reset unsaved changes flag immediately upon successful save */
