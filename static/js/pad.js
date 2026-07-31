@@ -681,3 +681,5 @@ updateStats();
 /* [2026-07-28] feat(guard): reset unsaved changes flag immediately upon successful save */
 
 /* [2026-07-30] feat(toast): implement showToast helper with type variants */
+
+/* [2026-07-31] feat(toast): implement showToast helper with type variants */
