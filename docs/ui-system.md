@@ -24,3 +24,5 @@
 ## [2026-07-29] docs: document user feedback and alert patterns in docs/ui-system.md
 
 ## [2026-07-30] docs: document user feedback and alert patterns in docs/ui-system.md
+
+## [2026-08-05] docs: document user feedback and alert patterns in docs/ui-system.md
