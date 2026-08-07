@@ -1587,3 +1587,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-08-06] style(toast): add subtle box-shadow layer for toast cards */
 
 /* [2026-08-07] style(elevation): refine box-shadow depth layers across components */
+
+/* [2026-08-07] style(effects): add glowing pulse animation to active status dot */
