@@ -28,3 +28,5 @@
 ## [2026-08-05] docs: document user feedback and alert patterns in docs/ui-system.md
 
 ## [2026-08-06] docs: document user feedback and alert patterns in docs/ui-system.md
+
+## [2026-08-07] docs: document motion and micro-interaction guidelines in UI system
