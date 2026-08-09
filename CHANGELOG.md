@@ -228,3 +228,5 @@
 ## [2026-08-04] chore: update changelog for toast notification framework
 
 ## [2026-08-06] chore: update changelog for notification and guard systems
+
+## [2026-08-09] chore: update changelog for animation polish
