@@ -32,3 +32,5 @@
 ## [2026-08-07] docs: document motion and micro-interaction guidelines in UI system
 
 ## [2026-08-09] docs: document motion and micro-interaction guidelines in UI system
+
+## [2026-08-11] docs: document micro-interaction specs in docs/ui-system.md
