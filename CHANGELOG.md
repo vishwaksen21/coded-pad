@@ -230,3 +230,5 @@
 ## [2026-08-06] chore: update changelog for notification and guard systems
 
 ## [2026-08-09] chore: update changelog for animation polish
+
+## [2026-08-12] chore: update changelog for motion design enhancements
