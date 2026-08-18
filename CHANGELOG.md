@@ -236,3 +236,5 @@
 ## [2026-08-16] chore: update changelog for animation polish
 
 ## [2026-08-17] chore: update changelog for animation polish
+
+## [2026-08-18] chore: update changelog for motion design enhancements
