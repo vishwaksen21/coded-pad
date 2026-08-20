@@ -1647,3 +1647,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-08-20] style(glass): implement backdrop-filter blur effects on modals and header */
 
 /* [2026-08-20] style(elevation): refine box-shadow depth layers across components */
+
+/* [2026-08-20] style(effects): add glowing pulse animation to active status dot */
