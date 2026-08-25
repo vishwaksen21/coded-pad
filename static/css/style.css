@@ -1675,3 +1675,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-08-25] style(motion): add fade-in entrance keyframe for dropdown menus */
 
 /* [2026-08-25] refactor(style): remove obsolete CSS rules and prefix duplicates */
+
+/* [2026-08-25] style(effects): smooth border color transition on card hover */
