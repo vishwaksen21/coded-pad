@@ -1679,3 +1679,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-08-25] style(effects): smooth border color transition on card hover */
 
 /* [2026-08-26] style(effects): smooth border color transition on card hover */
+
+/* [2026-08-26] style(motion): add button press scale micro-interaction (scale 0.97) */
