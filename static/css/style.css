@@ -1701,3 +1701,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-08-28] style(effects): add glowing pulse animation to active status dot */
 
 /* [2026-08-28] style(inputs): add subtle animated glow to secret key input focus state */
+
+/* [2026-08-28] perf(css): optimize transition timing functions using cubic-bezier */
