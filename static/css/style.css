@@ -1699,3 +1699,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-08-28] style(elevation): refine box-shadow depth layers across components */
 
 /* [2026-08-28] style(effects): add glowing pulse animation to active status dot */
+
+/* [2026-08-28] style(inputs): add subtle animated glow to secret key input focus state */
