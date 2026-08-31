@@ -1717,3 +1717,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-08-31] perf(css): optimize transition timing functions using cubic-bezier */
 
 /* [2026-08-31] style(motion): add fade-in entrance keyframe for dropdown menus */
+
+/* [2026-08-31] refactor(style): remove obsolete CSS rules and prefix duplicates */
