@@ -1713,3 +1713,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-08-30] style(inputs): add subtle animated glow to secret key input focus state */
 
 /* [2026-08-30] perf(css): optimize transition timing functions using cubic-bezier */
+
+/* [2026-08-31] perf(css): optimize transition timing functions using cubic-bezier */
