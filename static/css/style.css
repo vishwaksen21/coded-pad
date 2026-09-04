@@ -1737,3 +1737,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-09-04] style(motion): add button press scale micro-interaction (scale 0.97) */
 
 /* [2026-09-04] style(motion): add smooth hover transitions for interactive tool buttons */
+
+/* [2026-09-04] style(glass): implement backdrop-filter blur effects on modals and header */
