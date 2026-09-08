@@ -262,3 +262,5 @@
 ## [2026-09-03] chore: update changelog for motion design enhancements
 
 ## [2026-09-04] chore: update changelog for motion design enhancements
+
+## [2026-09-08] chore: update changelog for accessibility milestones
