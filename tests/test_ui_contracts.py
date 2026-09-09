@@ -222,3 +222,5 @@ if __name__ == "__main__":
 # [2026-09-03] test(ui): verify cubic-bezier transitions on interactive elements
 
 # [2026-09-07] test(a11y): verify semantic attributes and accessibility contracts
+
+# [2026-09-09] test(a11y): test keyboard focus traversal across editor controls
