@@ -264,3 +264,5 @@
 ## [2026-09-04] chore: update changelog for motion design enhancements
 
 ## [2026-09-08] chore: update changelog for accessibility milestones
+
+## [2026-09-10] chore: update changelog for mobile and accessibility hardening
