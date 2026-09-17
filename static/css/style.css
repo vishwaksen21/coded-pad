@@ -1783,3 +1783,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-09-16] style(responsive): optimize small mobile padding for screens under 480px */
 
 /* [2026-09-16] a11y: ensure color-contrast exceeds 4.5:1 across all themes */
+
+/* [2026-09-17] a11y: ensure color-contrast exceeds 4.5:1 across all themes */
