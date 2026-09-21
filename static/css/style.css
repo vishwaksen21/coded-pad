@@ -1787,3 +1787,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-09-17] a11y: ensure color-contrast exceeds 4.5:1 across all themes */
 
 /* [2026-09-20] a11y: ensure high-contrast focus-visible rings for keyboard users */
+
+/* [2026-09-21] style(responsive): refine mobile header action layout for screens under 600px */
