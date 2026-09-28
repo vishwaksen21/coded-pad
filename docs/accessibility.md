@@ -20,3 +20,5 @@
 ## [2026-09-23] docs(a11y): document WCAG AA accessibility audit results
 
 ## [2026-09-26] docs(a11y): finalize accessibility compliance documentation in docs/accessibility.md
+
+## [2026-09-28] docs(a11y): document WCAG AA accessibility audit results
