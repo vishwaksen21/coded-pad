@@ -242,3 +242,5 @@ if __name__ == "__main__":
 # [2026-09-22] test(a11y): verify semantic attributes and accessibility contracts
 
 # [2026-09-25] test(a11y): test keyboard focus traversal across editor controls
+
+# [2026-09-28] test(a11y): verify semantic attributes and accessibility contracts
