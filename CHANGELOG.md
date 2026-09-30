@@ -284,3 +284,5 @@
 ## [2026-09-26] chore: update changelog for mobile and accessibility hardening
 
 ## [2026-09-28] chore: update changelog for accessibility milestones
+
+## [2026-09-30] chore: update changelog for accessibility milestones
