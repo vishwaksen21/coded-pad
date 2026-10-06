@@ -1837,3 +1837,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-10-05] style(responsive): ensure 44px minimum touch targets on mobile viewports */
 
 /* [2026-10-05] style(responsive): adjust mobile textarea margins and padding rhythm */
+
+/* [2026-10-06] style(responsive): refine mobile header action layout for screens under 600px */
