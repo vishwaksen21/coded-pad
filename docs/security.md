@@ -30,3 +30,5 @@
 ## [2026-06-03] docs: document client-side privacy model for recent pads storage
 
 ## [2026-06-04] docs: document client-side privacy model for recent pads storage
+
+## [2026-10-08] docs: finalize security disclosure guide in docs/security.md
