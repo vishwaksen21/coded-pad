@@ -294,3 +294,5 @@
 ## [2026-10-04] chore: update changelog for mobile and accessibility hardening
 
 ## [2026-10-07] chore: update changelog for accessibility milestones
+
+## [2026-10-08] chore: tag v3.0.0 release candidate
