@@ -125,3 +125,5 @@ if __name__ == "__main__":
 # [2026-05-30] test(home): test homepage route rendering and form attributes
 
 # [2026-05-31] test(home): test homepage route rendering and form attributes
+
+# [2026-10-12] test(regression): run complete test suite verifying API, crypto, and UI
