@@ -310,3 +310,5 @@
 ## [2026-10-19] chore: update CHANGELOG.md for v3.0.0 release
 
 ## [2026-10-20] chore: tag v3.0.0 release candidate
+
+## [2026-10-21] chore: tag v3.0.0 release candidate
