@@ -22,3 +22,5 @@
 ## [2026-10-15] docs: review API endpoint documentation in docs/api.md
 
 ## [2026-10-16] docs: review API endpoint documentation in docs/api.md
+
+## [2026-10-21] docs: review API endpoint documentation in docs/api.md
