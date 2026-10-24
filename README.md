@@ -32,3 +32,5 @@
 ## [2026-10-23] release: Coded Pad v3.0 - modern encrypted serverless notepad
 
 ## [2026-10-24] release: Coded Pad v3.0 - modern encrypted serverless notepad
+
+## [2026-10-24] docs: update README.md with v3.0 features, UI screenshots, and shortcuts
