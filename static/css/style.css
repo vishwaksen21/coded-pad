@@ -1867,3 +1867,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* [2026-10-22] style: final polish of typography scale and line measures */
 
 /* [2026-10-23] style: final polish of typography scale and line measures */
+
+/* [2026-10-25] refactor: consolidate CSS design tokens and clean up legacy selectors */
