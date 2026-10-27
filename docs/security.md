@@ -42,3 +42,5 @@
 ## [2026-10-20] docs: finalize security disclosure guide in docs/security.md
 
 ## [2026-10-21] docs: finalize security disclosure guide in docs/security.md
+
+## [2026-10-27] docs: finalize security disclosure guide in docs/security.md
