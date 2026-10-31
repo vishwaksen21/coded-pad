@@ -1,36 +1,14 @@
+# Theming & Typography — Coded Pad
 
-## [2026-01-06] docs(theming): document CSS custom property tokens and palette
+## Themes
+Coded Pad supports three distinct theming modes:
+1. **Light Mode**: High contrast, crisp slate borders, soft blue accents.
+2. **Dark Mode**: OLED-friendly dark navy surfaces, vibrant primary blues, muted secondary text.
+3. **System Auto**: Adapts dynamically based on `@media (prefers-color-scheme: dark)`.
 
-## [2026-01-10] docs(theming): add theme customization guidelines to docs/theming.md
+Theme state is stored in browser `localStorage` under `codedpad_theme`.
 
-## [2026-01-11] docs(theming): add theme customization guidelines to docs/theming.md
-
-## [2026-01-15] docs(theming): document CSS custom property tokens and palette
-
-## [2026-01-16] docs(theming): document CSS custom property tokens and palette
-
-## [2026-01-17] docs(theming): document CSS custom property tokens and palette
-
-## [2026-01-20] docs(theming): add theme customization guidelines to docs/theming.md
-
-## [2026-01-21] docs(theming): add theme customization guidelines to docs/theming.md
-
-## [2026-01-22] docs(theming): add theme customization guidelines to docs/theming.md
-
-## [2026-01-26] docs(theming): document CSS custom property tokens and palette
-
-## [2026-01-27] docs(theming): document CSS custom property tokens and palette
-
-## [2026-01-31] docs(theming): add theme customization guidelines to docs/theming.md
-
-## [2026-02-01] docs(theming): add theme customization guidelines to docs/theming.md
-
-## [2026-02-09] docs(typography): document font selection rationale and readability benchmarks
-
-## [2026-02-10] docs(typography): document font selection rationale and readability benchmarks
-
-## [2026-02-18] docs(typography): document font selection rationale and readability benchmarks
-
-## [2026-02-19] docs(typography): document font selection rationale and readability benchmarks
-
-## [2026-02-28] docs(typography): document font selection rationale and readability benchmarks
+## Typography Options
+- **Inter (Sans)**: Default clean UI font, optimal for fast notes and general text.
+- **Lora (Serif)**: Editorial, publication-grade serif font designed for long-form reading.
+- **JetBrains Mono (Monospace)**: Code-optimized monospaced font with high legibility.

@@ -1,42 +1,8 @@
+# Keyboard Shortcuts Guide — Coded Pad
 
-## [2026-03-08] docs(shortcuts): create keyboard shortcuts and action guide
-
-## [2026-03-11] docs: document export and clipboard workflow in docs/shortcuts.md
-
-## [2026-03-13] docs: document export and clipboard workflow in docs/shortcuts.md
-
-## [2026-03-18] docs(shortcuts): create keyboard shortcuts and action guide
-
-## [2026-03-20] docs: document export and clipboard workflow in docs/shortcuts.md
-
-## [2026-03-21] docs: document export and clipboard workflow in docs/shortcuts.md
-
-## [2026-03-22] docs: document export and clipboard workflow in docs/shortcuts.md
-
-## [2026-03-26] docs(shortcuts): create keyboard shortcuts and action guide
-
-## [2026-03-27] docs(shortcuts): create keyboard shortcuts and action guide
-
-## [2026-03-30] docs: document export and clipboard workflow in docs/shortcuts.md
-
-## [2026-03-31] docs: document export and clipboard workflow in docs/shortcuts.md
-
-## [2026-04-01] docs: document export and clipboard workflow in docs/shortcuts.md
-
-## [2026-04-04] docs(shortcuts): create keyboard shortcuts and action guide
-
-## [2026-06-07] docs: add Zen mode usage documentation to shortcuts guide
-
-## [2026-06-08] docs: add Zen mode usage documentation to shortcuts guide
-
-## [2026-06-14] docs: add Zen mode usage documentation to shortcuts guide
-
-## [2026-06-15] docs: add Zen mode usage documentation to shortcuts guide
-
-## [2026-06-16] docs: add Zen mode usage documentation to shortcuts guide
-
-## [2026-06-24] docs: add Zen mode usage documentation to shortcuts guide
-
-## [2026-07-01] docs: add Zen mode usage documentation to shortcuts guide
-
-## [2026-07-02] docs: add Zen mode usage documentation to shortcuts guide
+| Shortcut | Description |
+|---|---|
+| `⌘ + S` / `Ctrl + S` | Immediately save note to encrypted vault |
+| `⌘ + Shift + F` / `Ctrl + Shift + F` | Toggle Zen distraction-free mode |
+| `Escape` | Exit Zen mode or dismiss open modals/menus |
+| `Enter` (Homepage) | Submit secret code and open pad |

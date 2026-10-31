@@ -1,36 +1,43 @@
+# API Reference — Coded Pad
 
-## [2025-12-03] docs: specify JSON payload structures for /api/save in docs/api.md
+## Endpoints
 
-## [2025-12-04] docs: specify JSON payload structures for /api/save in docs/api.md
+### `GET /api/health`
+Health and diagnostics endpoint for uptime monitors.
 
-## [2025-12-05] docs: specify JSON payload structures for /api/save in docs/api.md
+#### Response `200 OK`
+```json
+{
+  "status": "ok",
+  "database": "sqlite",
+  "timestamp": "2026-10-31 12:00:00 UTC"
+}
+```
 
-## [2025-12-16] docs: specify JSON payload structures for /api/save in docs/api.md
+### Error Responses
+- `400 Bad Request`: Missing or invalid secret code.
+- `413 Payload Too Large`: Note exceeds 500,000 characters.
+- `500 Internal Server Error`: Unexpected database persistence issue.
 
-## [2025-12-17] docs: specify JSON payload structures for /api/save in docs/api.md
+### `POST /api/save`
+Save encrypted note.
 
-## [2025-12-18] docs: specify JSON payload structures for /api/save in docs/api.md
+#### Request Body
+```json
+{
+  "secret_code": "my-secret-key",
+  "note": "Encrypted text content"
+}
+```
 
-## [2025-12-29] docs: specify JSON payload structures for /api/save in docs/api.md
+## Client Usage Example (JavaScript)
 
-## [2025-12-30] docs: specify JSON payload structures for /api/save in docs/api.md
-
-## [2026-10-09] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-10] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-15] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-16] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-21] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-22] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-23] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-27] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-28] docs: review API endpoint documentation in docs/api.md
-
-## [2026-10-29] docs: review API endpoint documentation in docs/api.md
+```javascript
+const res = await fetch('/api/save', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ secret_code: 'my-code', note: 'Secret content' })
+});
+const data = await res.json();
+console.log(data);
+```

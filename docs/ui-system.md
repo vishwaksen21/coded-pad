@@ -1,84 +1,25 @@
+# Coded Pad — Modern UI Design System (v3.0)
 
-## [2026-02-05] docs(typography): document typographic hierarchy in docs/ui-system.md
+## Design Tokens & Variables
+Coded Pad implements a structured CSS Custom Properties design system supporting automatic and manual light/dark theming.
 
-## [2026-02-06] docs(typography): document typographic hierarchy in docs/ui-system.md
+### Colors
+- `--bg`: Root page background color.
+- `--surface`: Elevated container / card background.
+- `--surface-hover`: Subtle hover state background for interactive items.
+- `--border`: Crisp 1px border separator.
+- `--primary`: Vibrant primary blue accent (`#3b82f6`).
+- `--text`: High-contrast foreground typography.
+- `--text-muted`: Secondary metadata and helper labels.
 
-## [2026-02-07] docs(typography): document typographic hierarchy in docs/ui-system.md
+### Typography
+- **Sans-Serif**: `Inter`, system-ui.
+- **Serif**: `Lora`, Georgia.
+- **Monospace**: `JetBrains Mono`, Courier.
 
-## [2026-02-15] docs(typography): document typographic hierarchy in docs/ui-system.md
-
-## [2026-02-16] docs(typography): document typographic hierarchy in docs/ui-system.md
-
-## [2026-02-24] docs(typography): document typographic hierarchy in docs/ui-system.md
-
-## [2026-02-25] docs(typography): document typographic hierarchy in docs/ui-system.md
-
-## [2026-07-13] docs: document user feedback and alert patterns in docs/ui-system.md
-
-## [2026-07-14] docs: document user feedback and alert patterns in docs/ui-system.md
-
-## [2026-07-22] docs: document user feedback and alert patterns in docs/ui-system.md
-
-## [2026-07-28] docs: document user feedback and alert patterns in docs/ui-system.md
-
-## [2026-07-29] docs: document user feedback and alert patterns in docs/ui-system.md
-
-## [2026-07-30] docs: document user feedback and alert patterns in docs/ui-system.md
-
-## [2026-08-05] docs: document user feedback and alert patterns in docs/ui-system.md
-
-## [2026-08-06] docs: document user feedback and alert patterns in docs/ui-system.md
-
-## [2026-08-07] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-08-09] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-08-11] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-08-12] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-08-16] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-08-18] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-08-19] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-08-22] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-08-23] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-08-24] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-08-26] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-08-27] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-08-28] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-08-30] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-08-31] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-09-01] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-09-02] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-09-03] docs: document micro-interaction specs in docs/ui-system.md
-
-## [2026-09-06] docs: document motion and micro-interaction guidelines in UI system
-
-## [2026-10-11] docs(ui): finalize UI design system specification and tokens
-
-## [2026-10-15] docs(ui): finalize UI design system specification and tokens
-
-## [2026-10-17] docs(ui): finalize UI design system specification and tokens
-
-## [2026-10-18] docs(ui): finalize UI design system specification and tokens
-
-## [2026-10-23] docs(ui): finalize UI design system specification and tokens
-
-## [2026-10-24] docs(ui): finalize UI design system specification and tokens
-
-## [2026-10-30] docs(ui): finalize UI design system specification and tokens
-
-## [2026-10-31] docs(ui): finalize UI design system specification and tokens
+### Components
+1. **Brand Bar**: Logo with lock glyph, responsive secret code pill.
+2. **Editor Canvas**: Spacious textarea with customizable fonts and generous margins.
+3. **Pills & Badges**: Tabular numeric counters and status pills.
+4. **Toast Alerts**: Non-intrusive floating feedback messages at bottom right.
+5. **Zen Mode**: Complete distraction elimination for pure writing focus.
