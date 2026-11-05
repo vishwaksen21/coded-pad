@@ -54,6 +54,7 @@ class TestApiEndpoints(unittest.TestCase):
         response = self.client.get("/static/css/style.css")
         self.assertEqual(response.status_code, 200)
         self.assertIn("prefers-color-scheme", response.data.decode("utf-8"))
+        response.close()
 
 if __name__ == "__main__":
     unittest.main()

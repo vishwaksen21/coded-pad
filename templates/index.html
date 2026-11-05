@@ -150,18 +150,20 @@
         });
         document.getElementById('homeForm').addEventListener('submit', (e) => {
             const code = secretInput.value.trim();
-            if (code && code.length >= 3) {
+            if (!code || code.length < 3) {
                 e.preventDefault();
-                const submitBtn = document.querySelector('.home-btn');
-                if (submitBtn) {
-                    submitBtn.innerHTML = '<span>Opening...</span> <span class="btn-arrow">⚡</span>';
-                    submitBtn.style.pointerEvents = 'none';
-                    submitBtn.style.opacity = '0.9';
-                }
+                secretInput.focus();
+                return;
+            }
+            try {
                 const recent = getRecentPads().filter(p => p.code !== code);
                 recent.unshift({ code, date: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) });
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(recent.slice(0, 8)));
-                window.location.href = `/pad/${encodeURIComponent(code)}`;
+            } catch (err) {}
+
+            const submitBtn = document.querySelector('.home-btn');
+            if (submitBtn) {
+                submitBtn.innerHTML = '<span>Opening...</span> <span class="btn-arrow">⚡</span>';
             }
         });
         renderRecentPads();

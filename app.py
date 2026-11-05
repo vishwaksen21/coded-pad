@@ -21,8 +21,19 @@ from cryptography.hazmat.primitives import padding
 app = Flask(__name__)
 
 DATABASE_URL = os.environ.get("DATABASE_URL", "").strip()
+if "channel_binding" in DATABASE_URL:
+    try:
+        import urllib.parse as _up
+        _parsed = _up.urlparse(DATABASE_URL)
+        _qs = _up.parse_qs(_parsed.query)
+        _qs.pop("channel_binding", None)
+        _new_qs = _up.urlencode({k: v[0] for k, v in _qs.items()})
+        DATABASE_URL = _up.urlunparse(_parsed._replace(query=_new_qs))
+    except Exception:
+        pass
+
 USE_POSTGRES = bool(DATABASE_URL)
-CONNECT_TIMEOUT = 15
+CONNECT_TIMEOUT = 10
 
 def get_db():
     if USE_POSTGRES:
@@ -89,29 +100,33 @@ def open_pad():
         return redirect(url_for("home"))
     return redirect(url_for("pad_page", secret_code=secret_code))
 
-@app.route("/pad/<secret_code>")
+@app.route("/pad/<path:secret_code>")
 def pad_page(secret_code):
     secret_code = secret_code.strip()
     if len(secret_code) < 3:
         return redirect(url_for("home"))
 
     code_hash = hash_code(secret_code)
-    conn = get_db()
+    row = None
     try:
-        if USE_POSTGRES:
-            cur = conn.cursor()
-            cur.execute(
-                "SELECT encrypted_note, iv, created_time, updated_time FROM notes WHERE code_hash = %s",
-                (code_hash,)
-            )
-            row = cur.fetchone()
-        else:
-            row = conn.execute(
-                "SELECT encrypted_note, iv, created_time, updated_time FROM notes WHERE code_hash = ?",
-                (code_hash,)
-            ).fetchone()
-    finally:
-        conn.close()
+        conn = get_db()
+        try:
+            if USE_POSTGRES:
+                cur = conn.cursor()
+                cur.execute(
+                    "SELECT encrypted_note, iv, created_time, updated_time FROM notes WHERE code_hash = %s",
+                    (code_hash,)
+                )
+                row = cur.fetchone()
+            else:
+                row = conn.execute(
+                    "SELECT encrypted_note, iv, created_time, updated_time FROM notes WHERE code_hash = ?",
+                    (code_hash,)
+                ).fetchone()
+        finally:
+            conn.close()
+    except Exception as e:
+        row = None
 
     if row:
         note_text = decrypt_note(row["encrypted_note"], row["iv"], secret_code)
