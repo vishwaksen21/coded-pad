@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coded Pad – Zero-Knowledge Ephemeral Notepad</title>
+    <link rel="preload" href="/static/css/style.css" as="style" />
+    <link rel="prefetch" href="/static/js/pad.js" />
     <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+    </noscript>
 </head>
 <body class="home-body">
 
@@ -143,12 +148,20 @@
             localStorage.removeItem(STORAGE_KEY);
             renderRecentPads();
         });
-        document.getElementById('homeForm').addEventListener('submit', () => {
+        document.getElementById('homeForm').addEventListener('submit', (e) => {
             const code = secretInput.value.trim();
-            if (code) {
+            if (code && code.length >= 3) {
+                e.preventDefault();
+                const submitBtn = document.querySelector('.home-btn');
+                if (submitBtn) {
+                    submitBtn.innerHTML = '<span>Opening...</span> <span class="btn-arrow">⚡</span>';
+                    submitBtn.style.pointerEvents = 'none';
+                    submitBtn.style.opacity = '0.9';
+                }
                 const recent = getRecentPads().filter(p => p.code !== code);
                 recent.unshift({ code, date: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) });
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(recent.slice(0, 8)));
+                window.location.href = `/pad/${encodeURIComponent(code)}`;
             }
         });
         renderRecentPads();

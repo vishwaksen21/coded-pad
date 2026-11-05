@@ -35,6 +35,11 @@ def get_db():
         )
     conn = sqlite3.connect("notes.db", timeout=CONNECT_TIMEOUT)
     conn.row_factory = sqlite3.Row
+    try:
+        conn.execute("PRAGMA journal_mode = WAL;")
+        conn.execute("PRAGMA synchronous = NORMAL;")
+    except Exception:
+        pass
     return conn
 
 def hash_code(secret_code: str) -> str:
@@ -82,70 +87,48 @@ def open_pad():
     secret_code = request.form.get("secret_code", "").strip()
     if len(secret_code) < 3:
         return redirect(url_for("home"))
-
-    code_hash = hash_code(secret_code)
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-    conn = get_db()
-    try:
-        if USE_POSTGRES:
-            cur = conn.cursor()
-            cur.execute("SELECT code_hash FROM notes WHERE code_hash = %s", (code_hash,))
-            if cur.fetchone() is None:
-                cur.execute(
-                    "INSERT INTO notes (code_hash, encrypted_note, iv, created_time, updated_time) VALUES (%s, '', '', %s, %s)",
-                    (code_hash, now, now)
-                )
-        else:
-            row = conn.execute("SELECT code_hash FROM notes WHERE code_hash = ?", (code_hash,)).fetchone()
-            if row is None:
-                conn.execute(
-                    "INSERT INTO notes (code_hash, encrypted_note, iv, created_time, updated_time) VALUES (?, '', '', ?, ?)",
-                    (code_hash, now, now)
-                )
-        conn.commit()
-    except Exception:
-        return jsonify({"success": False, "error": "Database error while opening note."}), 500
-    finally:
-        conn.close()
-
     return redirect(url_for("pad_page", secret_code=secret_code))
 
 @app.route("/pad/<secret_code>")
 def pad_page(secret_code):
+    secret_code = secret_code.strip()
+    if len(secret_code) < 3:
+        return redirect(url_for("home"))
+
     code_hash = hash_code(secret_code)
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
     conn = get_db()
     try:
         if USE_POSTGRES:
             cur = conn.cursor()
-            cur.execute("SELECT encrypted_note, iv, created_time, updated_time FROM notes WHERE code_hash = %s", (code_hash,))
+            cur.execute(
+                "SELECT encrypted_note, iv, created_time, updated_time FROM notes WHERE code_hash = %s",
+                (code_hash,)
+            )
             row = cur.fetchone()
-            if row is None:
-                cur.execute(
-                    "INSERT INTO notes (code_hash, encrypted_note, iv, created_time, updated_time) VALUES (%s, '', '', %s, %s)",
-                    (code_hash, now, now)
-                )
-                conn.commit()
-                row = {"encrypted_note": "", "iv": "", "created_time": now, "updated_time": now}
         else:
-            row = conn.execute("SELECT encrypted_note, iv, created_time, updated_time FROM notes WHERE code_hash = ?", (code_hash,)).fetchone()
-            if row is None:
-                conn.execute(
-                    "INSERT INTO notes (code_hash, encrypted_note, iv, created_time, updated_time) VALUES (?, '', '', ?, ?)",
-                    (code_hash, now, now)
-                )
-                conn.commit()
-                row = {"encrypted_note": "", "iv": "", "created_time": now, "updated_time": now}
+            row = conn.execute(
+                "SELECT encrypted_note, iv, created_time, updated_time FROM notes WHERE code_hash = ?",
+                (code_hash,)
+            ).fetchone()
     finally:
         conn.close()
 
-    note_text = decrypt_note(row["encrypted_note"], row["iv"], secret_code)
+    if row:
+        note_text = decrypt_note(row["encrypted_note"], row["iv"], secret_code)
+        created_time = row["created_time"]
+        updated_time = row["updated_time"]
+    else:
+        note_text = ""
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+        created_time = now
+        updated_time = "Never"
+
     return render_template(
         "pad.html",
         note=note_text,
         secret_code=secret_code,
-        created_time=row["created_time"],
-        updated_time=row["updated_time"]
+        created_time=created_time,
+        updated_time=updated_time
     )
 
 @app.route("/api/health")
@@ -178,16 +161,22 @@ def api_save():
         if USE_POSTGRES:
             cur = conn.cursor()
             cur.execute("""
-                UPDATE notes
-                SET encrypted_note = %s, iv = %s, updated_time = %s
-                WHERE code_hash = %s
-            """, (encrypted_note, iv, now, code_hash))
+                INSERT INTO notes (code_hash, encrypted_note, iv, created_time, updated_time)
+                VALUES (%s, %s, %s, %s, %s)
+                ON CONFLICT (code_hash) DO UPDATE SET
+                    encrypted_note = EXCLUDED.encrypted_note,
+                    iv = EXCLUDED.iv,
+                    updated_time = EXCLUDED.updated_time;
+            """, (code_hash, encrypted_note, iv, now, now))
         else:
             conn.execute("""
-                UPDATE notes
-                SET encrypted_note = ?, iv = ?, updated_time = ?
-                WHERE code_hash = ?
-            """, (encrypted_note, iv, now, code_hash))
+                INSERT INTO notes (code_hash, encrypted_note, iv, created_time, updated_time)
+                VALUES (?, ?, ?, ?, ?)
+                ON CONFLICT(code_hash) DO UPDATE SET
+                    encrypted_note = excluded.encrypted_note,
+                    iv = excluded.iv,
+                    updated_time = excluded.updated_time;
+            """, (code_hash, encrypted_note, iv, now, now))
         conn.commit()
     except Exception:
         return jsonify({"success": False, "error": "Database error while saving note."}), 500
