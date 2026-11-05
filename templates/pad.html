@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>Coded Pad – Secure Note</title>
     <link rel="preload" href="/static/css/style.css" as="style" />
     <link rel="stylesheet" href="/static/css/style.css" />
@@ -18,7 +23,10 @@
     <!-- ── Top Header Toolbar ── -->
     <header class="pad-header" id="padHeader">
         <div class="pad-brand-group">
-            <a href="/" class="pad-logo" title="Back to Coded Pad Home">🔒 Coded Pad</a>
+            <a href="/" class="pad-logo" title="Back to Coded Pad Home">
+                <span class="pad-logo-icon">🔒</span>
+                <span class="pad-logo-text">Coded Pad</span>
+            </a>
             <div class="pad-code-pill" id="codePill" title="Click to copy secret key" onclick="copySecretCode()">
                 <span class="code-pill-label">Key:</span>
                 <span class="code-pill-val" id="codeDisplay">{{ secret_code }}</span>
@@ -42,7 +50,9 @@
             <!-- Typography Switcher -->
             <div class="dropdown-wrap">
                 <button class="pad-tool-btn" id="fontDropdownBtn" onclick="toggleFontMenu()" title="Font family" aria-label="Change font">
-                    <span id="fontLabel">Sans</span> ▾
+                    <span class="btn-icon">Aa</span>
+                    <span id="fontLabel" class="btn-text">Sans</span>
+                    <span class="btn-arrow">▾</span>
                 </button>
                 <div class="dropdown-menu" id="fontMenu">
                     <button type="button" class="dropdown-item active" data-font="sans" onclick="setFontFamily('sans')">Inter (Sans)</button>
@@ -59,7 +69,9 @@
             <!-- Export Menu -->
             <div class="dropdown-wrap">
                 <button class="pad-tool-btn" id="exportBtn" onclick="toggleExportMenu()" title="Export Note" aria-label="Export options">
-                    <span>Export ▾</span>
+                    <span class="btn-icon">📥</span>
+                    <span class="btn-text">Export</span>
+                    <span class="btn-arrow">▾</span>
                 </button>
                 <div class="dropdown-menu dropdown-right" id="exportMenu">
                     <button type="button" class="dropdown-item" onclick="exportNote('md')">📥 Markdown (.md)</button>
@@ -71,11 +83,15 @@
             </div>
 
             <!-- Copy Quick Button -->
-            <button class="pad-copy-btn" id="copyBtn" onclick="copyNoteContent()" title="Copy entire note to clipboard" aria-label="Copy note content">Copy</button>
+            <button class="pad-copy-btn" id="copyBtn" onclick="copyNoteContent()" title="Copy entire note to clipboard" aria-label="Copy note content">
+                <span class="btn-icon">📋</span>
+                <span class="btn-text">Copy</span>
+            </button>
 
             <!-- Save Primary Button -->
-            <button class="pad-save-btn" id="saveBtn" onclick="saveNote()" title="Save changes (Ctrl+S / Cmd+S)">
-                <span>Save</span>
+            <button class="pad-save-btn" id="saveBtn" onclick="saveNote()" title="Save changes (Ctrl+S / Cmd+S)" aria-label="Save changes">
+                <span class="btn-icon">💾</span>
+                <span class="btn-text">Save</span>
                 <kbd class="kbd-hint">⌘S</kbd>
             </button>
         </div>
@@ -99,8 +115,8 @@
     <!-- ── Footer Status Bar ── -->
     <footer class="pad-footer" id="padFooter">
         <div class="pad-footer-left">
-            <span class="pad-badge-muted">Created: {{ created_time }}</span>
-            <span class="pad-footer-dot">·</span>
+            <span class="pad-badge-muted pad-meta-created">Created: {{ created_time }}</span>
+            <span class="pad-footer-dot pad-meta-created">·</span>
             <span id="updatedTime" class="pad-badge-muted">Last saved: {{ updated_time }}</span>
         </div>
 
@@ -108,10 +124,10 @@
             <span class="stat-pill" id="wordCount">0 words</span>
             <span class="pad-footer-dot">·</span>
             <span class="stat-pill" id="charCount">0 characters</span>
-            <span class="pad-footer-dot">·</span>
-            <span class="stat-pill" id="lineCount">0 lines</span>
-            <span class="pad-footer-dot">·</span>
-            <span class="stat-pill" id="readTime">~1 min read</span>
+            <span class="pad-footer-dot stat-detail">·</span>
+            <span class="stat-pill stat-detail" id="lineCount">0 lines</span>
+            <span class="pad-footer-dot stat-detail">·</span>
+            <span class="stat-pill stat-detail" id="readTime">~1 min read</span>
         </div>
 
         <div class="pad-footer-right">

@@ -49,11 +49,11 @@ async function copyNoteContent() {
         showToast("Note copied to clipboard", "success");
     }
     if (copyBtn) {
-        const orig = copyBtn.textContent;
-        copyBtn.textContent = "Copied!";
+        const orig = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<span class="btn-icon">✓</span><span class="btn-text">Copied!</span>';
         copyBtn.classList.add("copied");
         setTimeout(() => {
-            copyBtn.textContent = orig;
+            copyBtn.innerHTML = orig;
             copyBtn.classList.remove("copied");
         }, 1800);
     }
